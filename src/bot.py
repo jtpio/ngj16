@@ -34,7 +34,7 @@ def handle_message(bot, update):
     chat_id = update.message.chat_id
     text = update.message.text
     res = stateMachineManager.send_message(text)
-    print("TEXT:", text)
+    print("TEXT:" + text)
     custom_keyboard = [res['triggers']]
     reply_markup = telegram.ReplyKeyboardMarkup(custom_keyboard)
     bot.sendMessage(

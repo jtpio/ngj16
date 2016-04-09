@@ -21,15 +21,32 @@ class StateMachine:
         else:
             sys.exit(-1)
 
+    def transtion_to_state_with_text(self, display_text):
+        triggers = self.get_available_triggers_names()
+        required_trigger = ""
+        for trigger in triggers:
+            if (self.get_display_text(trigger) == display_text):
+                required_trigger = trigger
+
+        if (required_trigger):
+            self.transtion_to_state(required_trigger)
+
     def get_metadata(self, trigger_name):
         trigger = self._get_trigger(trigger_name)
         return trigger['metadata']
+
+    def get_available_display_texts(self):
+        triggers = self.get_available_triggers_names()
+        texts = []
+        for trigger in triggers:
+            texts.append(self.get_display_text(trigger))
+        return texts
 
     def get_display_text(self, trigger_name):
         trigger = self._get_trigger(trigger_name)
         return trigger['display_text']
 
-    def get_available_triggers(self):
+    def get_available_triggers_names(self):
         current_state = self._get_current_state()
         return current_state['triggers']
 
@@ -72,7 +89,7 @@ if __name__ == '__main__':
     json_filename = sys.argv[1]
     state_manager = StateMachine(json_filename, 'Valley')
     # print(state_manager.get_current_state())
-    available_triggers = state_manager.get_available_triggers()
+    available_triggers = state_manager.get_available_triggers_names()
     # print(state_manager.get_metadata(available_triggers[0]))
     # print(state_manager.get_display_text(available_triggers[1]))
     # print(state_manager._get_source(available_triggers[0]))

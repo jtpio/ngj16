@@ -6,8 +6,9 @@ class StateMachineManager:
         self.state_manager = StateMachine(json_filename, initial_state_name)
 
     def send_message(self, message):
-        self.state_manager.transtion_to_state(message)
+        print("te")
+        self.state_manager.transtion_to_state_with_text(message)
         return {
             'metadata': self.state_manager.get_metadata(message),
-            'triggers': self.state_manager.get_available_triggers()
+            'triggers': self.state_manager.get_available_display_texts()
         }
