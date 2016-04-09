@@ -29,7 +29,11 @@
 				{
 					"type": "text",
 					"data": "You have reached the mountain"
-				}]
+				},
+                {
+                    "type": "img",
+                    "data": "img/mountains_V01.png"
+                }]
 		},
 		{
 			"name": "valley_to_waterfall",
