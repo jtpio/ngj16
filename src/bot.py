@@ -27,6 +27,13 @@ def start(bot, update):
     bot.sendMessage(update.message.chat_id, text='Hi!')
 
 
+def help_message(bot, update):
+    bot.sendMessage(
+        update.message.chat_id,
+        text='Help? You need help? I am the one needing help!'
+    )
+
+
 def error(bot, update, error):
     logger.warn('Update "%s" caused error "%s"' % (update, error))
 
@@ -49,6 +56,7 @@ def main():
     updater = Updater(TELEGRAM_BOT_TOKEN_KRKKRK)
     dp = updater.dispatcher
     dp.addTelegramCommandHandler('start', start)
+    dp.addTelegramCommandHandler('help', help_message)
 
     dp.addTelegramMessageHandler(handle_message)
 
