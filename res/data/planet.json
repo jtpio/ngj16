@@ -153,7 +153,15 @@
 			"metadata": [
 				{
 					"type": "text",
-					"data": "OK, on my way. Let's see what we have. It actually looks more like a rock formation of some sort. (pause). Mountains. HC category."
+					"data": "OK, on my way. Let's see what we have. It actually looks more like a rock formation of some sort."
+				},
+                {
+					"type": "delay",
+					"data": 3
+				},
+                {
+					"type": "text",
+					"data": "Mountains. HC category."
 				},
 				{
 					"type": "img",
