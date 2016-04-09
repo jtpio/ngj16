@@ -74,8 +74,7 @@ def handle_metadata(bot, chat_id, metadata):
                 voice=open(RES_DIR + item_data, 'rb')
             )
         if item_type == 'delay':
-            time.sleep(0)
-            # time.sleep(int(item_data))
+            time.sleep(int(item_data))
 
 
 def handle_message(bot, update):

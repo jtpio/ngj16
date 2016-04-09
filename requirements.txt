@@ -1,2 +1,3 @@
 python-telegram-bot
+telepot == 6.7
 gTTS
