@@ -17,6 +17,11 @@ class StateMachine:
         else:
             sys.exit(-1)
 
+    def is_valid_text(self, display_text):
+        required_trigger = self._get_trigger_for_display_text(display_text)
+        print ("REQUIRED ", required_trigger)
+        return True if required_trigger else False
+
     def transtion_to_state_with_text(self, display_text):
         required_trigger = self._get_trigger_for_display_text(display_text)
         assert(required_trigger)
