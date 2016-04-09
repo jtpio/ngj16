@@ -33,6 +33,10 @@
                 {
                     "type": "img",
                     "data": "img/mountains_V01.png"
+                },
+                {
+                    "type": "snd",
+                    "data": "snd/glass.ogg"
                 }]
 		},
 		{
