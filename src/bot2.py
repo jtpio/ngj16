@@ -70,8 +70,7 @@ class PlayerHandler(telepot.async.helper.ChatHandler):
                 action = 'go'
             elif text == '/help':
                 yield from self.sender.sendMessage(
-                    'Help? You need help? I am the one needing help!',
-                    reply_markup=keyboard
+                    'Help? You need help? I am the one needing help!'
                 )
                 return
 
