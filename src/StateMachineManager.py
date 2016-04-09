@@ -14,11 +14,14 @@ class StateMachineManager:
                 'triggers': self.state_machine.get_available_display_texts()
             }
         else:
-            print("Invalid text message")
+            print("Invalid text message:", message)
+            return {
+                'metadata': [],
+                'triggers': []
+            }
 
     def get_current_display_texts(self):
         return self.state_machine.get_available_display_texts()
-
 
     def reset(self):
         self.state_machine.reset()
