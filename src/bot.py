@@ -61,9 +61,8 @@ def handle_metadata(bot, chat_id, metadata):
         if item_type == 'snd':
             bot.sendVoice(
                 chat_id,
-                voice = open(RES_DIR + item_data, 'rb')
+                voice=open(RES_DIR + item_data, 'rb')
             )
-
 
 
 def handle_message(bot, update):
@@ -76,7 +75,7 @@ def handle_message(bot, update):
     reply_markup = telegram.ReplyKeyboardMarkup(custom_keyboard)
     bot.sendMessage(
         chat_id,
-        text=res['metadata'][0]["data"],
+        text='Choose an option',
         reply_markup=reply_markup
     )
 

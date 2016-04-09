@@ -10,19 +10,22 @@
 		{
 			"name": "mountain",
 			"triggers": [
-
+				"mountain_to_valley",
+				"mountain_to_aliens"
 			]
 		},
 		{
 			"name": "crystals",
 			"triggers": [
-
+				"crystals_to_valley",
+				"crystals_to_aliens"
 			]
 		},
 		{
 			"name": "aliens",
 			"triggers": [
-
+				"aliens_to_mountain",
+				"aliens_to_crystals"
 			]
 		}
 	],
@@ -63,7 +66,39 @@
 				},
 				{
 					"type": "img",
-					"data": "img/mountains_V01.png"
+					"data": "img/crystals_V01.png"
+				}
+			]
+		},
+		{
+			"name": "mountain_to_valley",
+			"display_text": "The mountains are too intimidating, I would rather go to the valley instead.",
+			"source": "mountain",
+			"destination": "valley",
+			"metadata": [
+				{
+					"type": "text",
+					"data": "On my way"
+				},
+				{
+					"type": "img",
+					"data": "img/valley_V01.jpg"
+				}
+			]
+		},
+		{
+			"name": "mountain_to_aliens",
+			"display_text": "Mountain to aliens",
+			"source": "mountain",
+			"destination": "aliens",
+			"metadata": [
+				{
+					"type": "text",
+					"data": "On my way"
+				},
+				{
+					"type": "img",
+					"data": "img/aliens_V01.png"
 				}
 			]
 		}
