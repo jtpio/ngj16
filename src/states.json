@@ -1,0 +1,65 @@
+{
+	"states": 
+	[
+		{
+			"name": "Valley",
+			"triggers":["valley_to_mountain", "valley_to_waterfall"]
+		},
+		{
+			"name": "Mountain",
+			"triggers":["mountain_to_valley", "mountain_to_waterfall"]
+		},
+		{
+			"name": "Waterfall",
+			"triggers":["waterfall_to_mountain", "waterfall_to_valley"]
+		}				
+	],
+	"triggers": 
+	[
+		{
+			"name": "valley_to_mountain",
+			"display_text": "Move to Valley",
+			"source": "Valley",
+			"destination": "Mountain",
+			"metadata": [
+				{
+					"type": "text",
+					"data": "you are going to mountan"
+				},
+				{
+					"type": "text",
+					"data": "You have reached the mountain"
+				}]
+		},
+		{
+			"name": "valley_to_waterfall",
+			"display_text": "Move to Waterfall",			
+			"source": "Mountain",
+			"destination": "Valley",
+			"metadata": [
+				{
+					"type": "text",
+					"data": "you are going to mountan"
+				},
+				{
+					"type": "text",
+					"data": "You have reached the mountain"
+				}]
+		},
+		{
+			"name": "Move to Waterfall",
+			"display_text": "waterfall_to_mountain",			
+			"source": "Valley",
+			"destination": "Waterfall",
+			"metadata": [
+				{
+					"type": "text",
+					"data": "you are going to mountan"
+				},
+				{
+					"type": "text",
+					"data": "You have reached the mountain"
+				}]
+		}
+	]
+}
