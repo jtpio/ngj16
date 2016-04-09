@@ -8,7 +8,7 @@ What? You don't remember? Ah never mind.
 
 It's been a long trip, but I can finally see the planet. Almost there!
 
-Use /start so we can start talking, as I will definitely need help once I land on that.
+Use /start so we can start talking, as I will definitely need help once I land on that planet.
 
 ## About
 
