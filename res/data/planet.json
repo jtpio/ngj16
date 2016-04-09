@@ -88,7 +88,7 @@
 		},
 		{
 			"name": "mountain_to_aliens",
-			"display_text": "Mountain to aliens",
+			"display_text": "Go from the mountain to the aliens",
 			"source": "mountain",
 			"destination": "aliens",
 			"metadata": [
@@ -99,6 +99,70 @@
 				{
 					"type": "img",
 					"data": "img/aliens_V01.png"
+				}
+			]
+		},
+		{
+			"name": "crystals_to_valley",
+			"display_text": "Go from the crystals to the valley",
+			"source": "crystals",
+			"destination": "valley",
+			"metadata": [
+				{
+					"type": "text",
+					"data": "On my way"
+				},
+				{
+					"type": "img",
+					"data": "img/valley_V01.jpg"
+				}
+			]
+		},
+		{
+			"name": "crystals_to_aliens",
+			"display_text": "Go from the crystals to the aliens",
+			"source": "crystals",
+			"destination": "aliens",
+			"metadata": [
+				{
+					"type": "text",
+					"data": "On my way"
+				},
+				{
+					"type": "img",
+					"data": "img/aliens_V01.jpg"
+				}
+			]
+		},
+		{
+			"name": "aliens_to_mountain",
+			"display_text": "Go from the aliens to the mountain",
+			"source": "aliens",
+			"destination": "mountain",
+			"metadata": [
+				{
+					"type": "text",
+					"data": "On my way"
+				},
+				{
+					"type": "img",
+					"data": "img/mountains_V01.png"
+				}
+			]
+		},
+		{
+			"name": "aliens_to_crystals",
+			"display_text": "Go from the aliens to the crystals",
+			"source": "aliens",
+			"destination": "crystals",
+			"metadata": [
+				{
+					"type": "text",
+					"data": "On my way"
+				},
+				{
+					"type": "img",
+					"data": "img/crystals_V01.jpg"
 				}
 			]
 		}
