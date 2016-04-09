@@ -34,6 +34,21 @@
 		{
 			"name": "valley_to_waterfall",
 			"display_text": "Move to Waterfall",			
+			"source": "Valley",
+			"destination": "Waterfall",
+			"metadata": [
+				{
+					"type": "text",
+					"data": "you are going to mountan"
+				},
+				{
+					"type": "text",
+					"data": "You have reached the mountain"
+				}]
+		},
+		{
+			"name": "mountain_to_valley",
+			"display_text": "Move to Valley",			
 			"source": "Mountain",
 			"destination": "Valley",
 			"metadata": [
@@ -47,9 +62,9 @@
 				}]
 		},
 		{
-			"name": "Move to Waterfall",
-			"display_text": "waterfall_to_mountain",			
-			"source": "Valley",
+			"name": "mountain_to_waterfall",
+			"display_text": "Move to waterfall",			
+			"source": "Mountain",
 			"destination": "Waterfall",
 			"metadata": [
 				{
@@ -60,6 +75,36 @@
 					"type": "text",
 					"data": "You have reached the mountain"
 				}]
-		}
+		},
+		{
+			"name": "waterfall_to_mountain",
+			"display_text": "Move to waterfall",			
+			"source": "Waterfall",
+			"destination": "Mountain",
+			"metadata": [
+				{
+					"type": "text",
+					"data": "you are going to mountan"
+				},
+				{
+					"type": "text",
+					"data": "You have reached the mountain"
+				}]
+		},
+		{
+			"name": "waterfall_to_valley",
+			"display_text": "Move to valley",			
+			"source": "Waterfall",
+			"destination": "Valley",
+			"metadata": [
+				{
+					"type": "text",
+					"data": "you are going to mountan"
+				},
+				{
+					"type": "text",
+					"data": "You have reached the mountain"
+				}]
+		}				
 	]
 }
