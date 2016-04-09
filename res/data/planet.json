@@ -1,0 +1,71 @@
+{
+	"states": [
+		{
+			"name": "valley",
+			"triggers": [
+				"valley_to_mountain",
+				"valley_to_crystals"
+			]
+		},
+		{
+			"name": "mountain",
+			"triggers": [
+
+			]
+		},
+		{
+			"name": "crystals",
+			"triggers": [
+
+			]
+		},
+		{
+			"name": "aliens",
+			"triggers": [
+
+			]
+		}
+	],
+	"triggers": [
+		{
+			"name": "valley_to_mountain",
+			"display_text": "There is a mountain over there, should we go take a look?",
+			"source": "valley",
+			"destination": "mountain",
+			"metadata": [
+				{
+					"type": "text",
+					"data": "On the way to the mountain!"
+				},
+				{
+					"type": "text",
+					"data": "It was a long hike, but hey I made it finally."
+				},
+				{
+					"type": "img",
+					"data": "img/mountains_V01.png"
+				}
+			]
+		},
+		{
+			"name": "valley_to_crystals",
+			"display_text": "It's quite shiny on the right. Interesting.",
+			"source": "valley",
+			"destination": "crystals",
+			"metadata": [
+				{
+					"type": "text",
+					"data": "Okay!"
+				},
+				{
+					"type": "text",
+					"data": "Woooooooooo!"
+				},
+				{
+					"type": "img",
+					"data": "img/mountains_V01.png"
+				}
+			]
+		}
+	]
+}

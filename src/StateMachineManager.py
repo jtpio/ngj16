@@ -12,3 +12,6 @@ class StateMachineManager:
             'metadata': metadata,
             'triggers': self.state_manager.get_available_display_texts()
         }
+
+    def get_current_display_texts(self):
+        return self.state_manager.get_available_display_texts()
