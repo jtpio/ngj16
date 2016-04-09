@@ -2,7 +2,7 @@ import os
 import logging
 import telegram
 from telegram.ext import Updater
-import StateMachineManager
+from StateMachineManager import StateMachineManager
 
 TELEGRAM_BOT_TOKEN_KRKKRK = os.getenv('TELEGRAM_BOT_TOKEN_KRKKRK', '')
 BOT_NAME = '@krkkrk_bot'
@@ -10,6 +10,7 @@ BOT_NAME = '@krkkrk_bot'
 # DUMB
 DIRNAME = os.path.dirname(__file__)
 RES_DIR = os.path.join(DIRNAME, '../res/')
+STATES_JSON = os.path.join(DIRNAME, '../res/data/states.json')
 
 # Enable logging
 logging.basicConfig(
@@ -19,7 +20,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-stateMachineManager = StateMachineManager.StateMachineManager("states.json", "Valley")
+stateMachineManager = StateMachineManager(STATES_JSON, "Valley")
 
 
 def start(bot, update):

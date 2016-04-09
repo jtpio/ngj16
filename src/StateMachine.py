@@ -1,6 +1,8 @@
+import os
 import json
 import sys
 
+DIRNAME = os.path.dirname(__file__)
 
 def send_message(text):
     return {
