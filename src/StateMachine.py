@@ -1,14 +1,8 @@
-import os
 import json
+import os
 import sys
 
 DIRNAME = os.path.dirname(__file__)
-
-def send_message(text):
-    return {
-        'text': 'Hello there!',
-        'options': ['To the left', 'To the right']
-    }
 
 
 class StateMachine:
@@ -24,35 +18,36 @@ class StateMachine:
             sys.exit(-1)
 
     def transtion_to_state_with_text(self, display_text):
-        triggers = self.get_available_triggers_names()
-        required_trigger = ""
+        required_trigger = self._get_trigger_for_display_text(display_text)
+        assert(required_trigger)
+        print("Transitioning to State", required_trigger)
+        self._transtion_to_state(required_trigger)
+
+    def get_metadata_for_text(self, display_text):
+        required_trigger = self._get_trigger_for_display_text(display_text)
+        assert(required_trigger)
+        return self._get_metadata(required_trigger)
+
+    def get_available_display_texts(self):
+        triggers = self._get_available_triggers_names()
+        texts = []
         for trigger in triggers:
-            if (self.get_display_text(trigger) == display_text):
-                required_trigger = trigger
+            texts.append(self._get_display_text(trigger))
+        return texts
 
-        if (required_trigger):
-            self.transtion_to_state(required_trigger)
-
-    def get_metadata(self, trigger_name):
+    def _get_metadata(self, trigger_name):
         trigger = self._get_trigger(trigger_name)
         return trigger['metadata']
 
-    def get_available_display_texts(self):
-        triggers = self.get_available_triggers_names()
-        texts = []
-        for trigger in triggers:
-            texts.append(self.get_display_text(trigger))
-        return texts
-
-    def get_display_text(self, trigger_name):
+    def _get_display_text(self, trigger_name):
         trigger = self._get_trigger(trigger_name)
         return trigger['display_text']
 
-    def get_available_triggers_names(self):
+    def _get_available_triggers_names(self):
         current_state = self._get_current_state()
         return current_state['triggers']
 
-    def transtion_to_state(self, trigger_name):
+    def _transtion_to_state(self, trigger_name):
         assert(self._is_valid_trigger(trigger_name))
         trigger_source = self._get_source(trigger_name)
         assert(trigger_source == self.current_state_name)
@@ -87,11 +82,20 @@ class StateMachine:
         trigger = self._get_trigger(trigger_name)
         return trigger['destination']
 
+    def _get_trigger_for_display_text(self, display_text):
+        triggers = self._get_available_triggers_names()
+        required_trigger = ""
+        for trigger in triggers:
+            if (self._get_display_text(trigger) == display_text):
+                required_trigger = trigger
+
+        return required_trigger
+
 if __name__ == '__main__':
     json_filename = sys.argv[1]
     state_manager = StateMachine(json_filename, 'Valley')
     # print(state_manager.get_current_state())
-    available_triggers = state_manager.get_available_triggers_names()
+    available_triggers = state_manager._get_available_triggers_names()
     # print(state_manager.get_metadata(available_triggers[0]))
     # print(state_manager.get_display_text(available_triggers[1]))
     # print(state_manager._get_source(available_triggers[0]))
