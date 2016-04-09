@@ -20,15 +20,18 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-stateMachineManager = StateMachineManager(STATES_JSON, "valley")
+stateMachineManager = StateMachineManager(STATES_JSON, "landing")
 
 
 def start(bot, update):
-    custom_keyboard = [stateMachineManager.get_current_display_texts()]
+    chat_id = update.message.chat_id
+    res = stateMachineManager.send_message('go')
+    handle_metadata(bot, chat_id, res['metadata'])
+    custom_keyboard = [res['triggers']]
     reply_markup = telegram.ReplyKeyboardMarkup(custom_keyboard)
     bot.sendMessage(
-        update.message.chat_id,
-        text='Hi!',
+        chat_id,
+        text='So what should I do?',
         reply_markup=reply_markup
     )
 

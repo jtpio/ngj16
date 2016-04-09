@@ -1,6 +1,12 @@
 {
 	"states": [
 		{
+			"name": "landing",
+			"triggers": [
+				"landing_to_valley"
+			]
+		},
+		{
 			"name": "valley",
 			"triggers": [
 				"valley_to_mountain",
@@ -31,8 +37,104 @@
 	],
 	"triggers": [
 		{
+			"name": "landing_to_valley",
+			"display_text": "go",
+			"source": "landing",
+			"destination": "valley",
+			"metadata": [
+				{
+					"type": "text",
+					"data": "There you go. Approaching surface."
+				},
+				{
+					"type": "delay",
+					"data": 3
+				},
+				{
+					"type": "text",
+					"data": "Wow. Interesting. Look at that."
+				},
+				{
+					"type": "img",
+					"data": "img/valley_topdown_V01.png"
+				},
+				{
+					"type": "delay",
+					"data": 5
+				},
+				{
+					"type": "text",
+					"data": "Initiating manual adjustements."
+				},
+				{
+					"type": "delay",
+					"data": 3
+				},
+				{
+					"type": "text",
+					"data": "Touchdown!"
+				},
+				{
+					"type": "delay",
+					"data": 2
+				},
+				{
+					"type": "img",
+					"data": "img/valley_ground_V01.png"
+				},
+				{
+					"type": "text",
+					"data": "Sample taken. Looks like ash."
+				},
+				{
+					"type": "text",
+					"data": "Analyzing... Analyzing..."
+				},
+				{
+					"type": "delay",
+					"data": 3
+				},
+				{
+					"type": "text",
+					"data": "Confused!? Reaching cognitive disequilibrium. Please hold."
+				},
+				{
+					"type": "delay",
+					"data": 3
+				},
+				{
+					"type": "text",
+					"data": "With a laser-like focus, I can tell you it's not gonna be a piece of cake to find water here..."
+				},
+				{
+					"type": "delay",
+					"data": 3
+				},
+				{
+					"type": "text",
+					"data": "Well, it looks like a really boring and dumb planet, honestly (unicode sad smiley or sticker)"
+				},
+				{
+					"type": "text",
+					"data": "There are only two directions at each crossing. So silly."
+				},
+				{
+					"type": "text",
+					"data": "On the left, my evidence-based critical thinking indicates large silhouettes."
+				},
+				{
+					"type": "text",
+					"data": "And on the right, luminous explusions."
+				},
+				{
+					"type": "delay",
+					"data": 3
+				}
+			]
+		},
+		{
 			"name": "valley_to_mountain",
-			"display_text": "There is a mountain over there, should we go take a look?",
+			"display_text": "",
 			"source": "valley",
 			"destination": "mountain",
 			"metadata": [
@@ -72,7 +174,7 @@
 		},
 		{
 			"name": "mountain_to_valley",
-			"display_text": "The mountains are too intimidating, I would rather go to the valley instead.",
+			"display_text": "",
 			"source": "mountain",
 			"destination": "valley",
 			"metadata": [

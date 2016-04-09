@@ -4,7 +4,8 @@
 
 Hi, I'm L3-AK, the robot you sent to space with the mission of finding water, and hopefully signs of life!
 
-What? You don't remember? Ah never mind.
+What? You don't remember? 
+Ah never mind.
 
 It's been a long trip, but I can finally see the planet. Almost there!
 
