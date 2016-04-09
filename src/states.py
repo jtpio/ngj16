@@ -2,6 +2,13 @@ import json
 import sys
 
 
+def send_message(text):
+    return {
+        'text': 'Hello there!',
+        'options': ['To the left', 'To the right']
+    }
+
+
 class States:
     def __init__(self, json_filename, initial_state_name):
         json_file = open(json_filename, 'r')
