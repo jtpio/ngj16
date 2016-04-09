@@ -46,6 +46,17 @@ def handle_metadata(bot, chat_id, metadata):
                 chat_id,
                 text = item_data
             )
+        if item_type == 'img':
+            bot.sendPhoto(
+                chat_id,
+                photo = open(RES_DIR + item_data, 'rb')
+            )
+        if item_type == 'snd':
+            bot.sendVoice(
+                chat_id,
+                voice = open(RES_DIR + item_data, 'rb')
+            )
+
 
 def handle_message(bot, update):
     chat_id = update.message.chat_id
