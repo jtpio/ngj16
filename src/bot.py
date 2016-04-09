@@ -2,6 +2,7 @@ import os
 import logging
 import telegram
 from telegram.ext import Updater
+import time
 from StateMachineManager import StateMachineManager
 
 TELEGRAM_BOT_TOKEN_KRKKRK = os.getenv('TELEGRAM_BOT_TOKEN_KRKKRK', '')
@@ -52,6 +53,8 @@ def handle_metadata(bot, chat_id, metadata):
         item_type = metadata_item['type']
         item_data = metadata_item['data']
         if item_type == 'text':
+            bot.sendChatAction(chat_id=chat_id, action=telegram.ChatAction.TYPING)
+            time.sleep(10)
             bot.sendMessage(
                 chat_id,
                 text=item_data
@@ -66,7 +69,8 @@ def handle_metadata(bot, chat_id, metadata):
                 chat_id,
                 voice=open(RES_DIR + item_data, 'rb')
             )
-
+        if item_type == 'delay':
+            time.sleep(int(item_data))
 
 def handle_message(bot, update):
     chat_id = update.message.chat_id
