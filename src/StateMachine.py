@@ -12,10 +12,13 @@ class StateMachine:
         self.states = states_json["states"]
         self.triggers = states_json["triggers"]
         if self._is_valid_state(initial_state_name):
-            print
-            self.current_state_name = initial_state_name
+            self.initial_state_name = initial_state_name
+            self.reset()
         else:
             sys.exit(-1)
+
+    def reset(self):
+        self.current_state_name = self.initial_state_name
 
     def is_valid_text(self, display_text):
         required_trigger = self._get_trigger_for_display_text(display_text)

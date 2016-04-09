@@ -25,6 +25,7 @@ stateMachineManager = StateMachineManager(STATES_JSON, "landing")
 
 
 def start(bot, update):
+    stateMachineManager.reset()
     chat_id = update.message.chat_id
     res = stateMachineManager.send_message('go')
     handle_metadata(bot, chat_id, res['metadata'])
@@ -52,12 +53,15 @@ def handle_metadata(bot, chat_id, metadata):
     for metadata_item in metadata:
         item_type = metadata_item['type']
         item_data = metadata_item['data']
+        bot.sendChatAction(
+            chat_id=chat_id,
+            action=telegram.ChatAction.TYPING
+        )
         if item_type == 'text':
-            bot.sendChatAction(chat_id=chat_id, action=telegram.ChatAction.TYPING)
-            time.sleep(10)
             bot.sendMessage(
                 chat_id,
-                text=item_data
+                text=item_data,
+                reply_markup=telegram.ReplyKeyboardHide()
             )
         if item_type == 'img':
             bot.sendPhoto(
@@ -70,7 +74,9 @@ def handle_metadata(bot, chat_id, metadata):
                 voice=open(RES_DIR + item_data, 'rb')
             )
         if item_type == 'delay':
-            time.sleep(int(item_data))
+            time.sleep(0)
+            # time.sleep(int(item_data))
+
 
 def handle_message(bot, update):
     chat_id = update.message.chat_id
@@ -78,11 +84,16 @@ def handle_message(bot, update):
     res = stateMachineManager.send_message(text)
     print("TEXT:", text)
     handle_metadata(bot, chat_id, res['metadata'])
-    custom_keyboard = [res['triggers']]
-    reply_markup = telegram.ReplyKeyboardMarkup(custom_keyboard)
+    triggers = res['triggers']
+    if len(triggers) > 0:
+        custom_keyboard = [triggers]
+        reply_markup = telegram.ReplyKeyboardMarkup(custom_keyboard)
+    else:
+        reply_markup = telegram.ReplyKeyboardHide()
+
     bot.sendMessage(
         chat_id,
-        text='Choose an option',
+        text='So what should I do?',
         reply_markup=reply_markup
     )
 

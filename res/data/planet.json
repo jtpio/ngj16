@@ -10,28 +10,33 @@
 			"name": "valley",
 			"triggers": [
 				"valley_to_mountain",
-				"valley_to_crystals"
+				"valley_to_valley"
 			]
 		},
 		{
 			"name": "mountain",
 			"triggers": [
-				"mountain_to_valley",
-				"mountain_to_aliens"
+				"mountain_to_mountain",
+				"mountain_to_crystals"
 			]
 		},
 		{
 			"name": "crystals",
 			"triggers": [
-				"crystals_to_valley",
+				"crystals_to_crystals",
 				"crystals_to_aliens"
 			]
 		},
 		{
 			"name": "aliens",
 			"triggers": [
-				"aliens_to_mountain",
-				"aliens_to_crystals"
+				"aliens_to_aliens_crash_site_noresistance",
+				"aliens_to_aliens_crash_site_resistance"
+			]
+		},
+		{
+			"name": "aliens_crash_site",
+			"triggers": [
 			]
 		}
 	],
@@ -56,7 +61,7 @@
 				},
 				{
 					"type": "img",
-					"data": "img/valley_topdown_V01.png"
+					"data": "img/topview_valley_V02.png"
 				},
 				{
 					"type": "delay",
@@ -80,7 +85,7 @@
 				},
 				{
 					"type": "img",
-					"data": "img/valley_ground_V01.png"
+					"data": "img/valley_ground_V02.png"
 				},
 				{
 					"type": "text",
@@ -134,17 +139,13 @@
 		},
 		{
 			"name": "valley_to_mountain",
-			"display_text": "",
+			"display_text": "Go to the large silhouettes",
 			"source": "valley",
 			"destination": "mountain",
 			"metadata": [
 				{
 					"type": "text",
-					"data": "On the way to the mountain!"
-				},
-				{
-					"type": "text",
-					"data": "It was a long hike, but hey I made it finally."
+					"data": "OK, on my way. Let's see what we have. It actually looks more like a rock formation of some sort. (pause). Mountains. HC category."
 				},
 				{
 					"type": "img",
@@ -153,118 +154,142 @@
 			]
 		},
 		{
-			"name": "valley_to_crystals",
-			"display_text": "It's quite shiny on the right. Interesting.",
+			"name": "valley_to_valley",
+			"display_text": "Go to the luminous explusions",
 			"source": "valley",
+			"destination": "valley",
+			"metadata": [
+				{
+					"type": "delay",
+					"data": 5
+				},
+				{
+					"type": "text",
+					"data": "OK I've made some progress. But my emerging curiosity unit is exhausted, I must turn back. Sorry (smiley blushing)"
+				},
+				{
+					"type": "text",
+					"data": "So now I'm back at the valley"
+				}
+			]
+		},
+		{
+			"name": "mountain_to_mountain",
+			"display_text": "Keep going.",
+			"source": "mountain",
+			"destination": "mountain",
+			"metadata": [
+				{
+					"type": "text",
+					"data": "Alright. I've looked for a way to circumnavigate this mountain but it is too steep so I can't go any further."
+				}
+			]
+		},
+		{
+			"name": "mountain_to_crystals",
+			"display_text": "Go to the glowing structures on the horizon",
+			"source": "mountain",
 			"destination": "crystals",
 			"metadata": [
 				{
 					"type": "text",
-					"data": "Okay!"
+					"data": "Let's go. My sensors indicate high levels of luminous emittance. That sounds good. Who knows, we might not find water but maybe gold instead? (happy smiley)"
 				},
 				{
 					"type": "text",
-					"data": "Woooooooooo!"
+					"data": "There seems to be a lot to discover in this area. But in the distance, I can see what I think is a smoke plume."
 				},
 				{
 					"type": "img",
-					"data": "img/crystals_V01.png"
+					"data": "img/crystals_V01.jpg"
 				}
 			]
 		},
 		{
-			"name": "mountain_to_valley",
-			"display_text": "",
-			"source": "mountain",
-			"destination": "valley",
-			"metadata": [
-				{
-					"type": "text",
-					"data": "On my way"
-				},
-				{
-					"type": "img",
-					"data": "img/valley_V01.jpg"
-				}
-			]
-		},
-		{
-			"name": "mountain_to_aliens",
-			"display_text": "Go from the mountain to the aliens",
-			"source": "mountain",
-			"destination": "aliens",
-			"metadata": [
-				{
-					"type": "text",
-					"data": "On my way"
-				},
-				{
-					"type": "img",
-					"data": "img/aliens_V01.png"
-				}
-			]
-		},
-		{
-			"name": "crystals_to_valley",
-			"display_text": "Go from the crystals to the valley",
+			"name": "crystals_to_crystals",
+			"display_text": "Explore further into the wonderful maze of crystals",
 			"source": "crystals",
-			"destination": "valley",
+			"destination": "crystals",
 			"metadata": [
 				{
 					"type": "text",
-					"data": "On my way"
+					"data": "That's not wonderful. I almost punctured my neck, or my leg, I don't know. I'm still in shock!"
 				},
 				{
-					"type": "img",
-					"data": "img/valley_V01.jpg"
+					"type": "text",
+					"data": "The crystalline structure of the planet surface means I can't proceed. Full stop. Activating retreat protocols. Giving up. (white flag gif)"
 				}
 			]
 		},
 		{
 			"name": "crystals_to_aliens",
-			"display_text": "Go from the crystals to the aliens",
+			"display_text": "Explore the smoke plume",
 			"source": "crystals",
 			"destination": "aliens",
 			"metadata": [
 				{
 					"type": "text",
-					"data": "On my way"
+					"data": "I've made some progress. The ground is becoming more even compared to the crystals. (put picture of a smoke plume)"
 				},
 				{
-					"type": "img",
-					"data": "img/aliens_V01.jpg"
+					"type": "text",
+					"data": "It's very quiet but I feel like I can hear strange noises in the distance. I've captured a sample for your analysis."
+				},
+				{
+					"type": "snd",
+					"data": "snd/glass.ogg"
 				}
 			]
 		},
 		{
-			"name": "aliens_to_mountain",
-			"display_text": "Go from the aliens to the mountain",
+			"name": "aliens_to_aliens_crash_site_resistance",
+			"display_text": "It seems too dangerous, just turn back!",
 			"source": "aliens",
-			"destination": "mountain",
+			"destination": "aliens_crash_site",
 			"metadata": [
 				{
 					"type": "text",
-					"data": "On my way"
+					"data": "I'm not sure what's happening..."
+				},
+				{
+					"type": "text",
+					"data": "There is a disturbance in the standard electromagnetic field."
+				},
+				{
+					"type": "text",
+					"data": "I'm being pulled in towards the crash site."
 				},
 				{
 					"type": "img",
-					"data": "img/mountains_V01.png"
+					"data": "img/crash_site_V01.jpg"
 				}
 			]
 		},
 		{
-			"name": "aliens_to_crystals",
-			"display_text": "Go from the aliens to the crystals",
+			"name": "aliens_to_aliens_crash_site_noresistance",
+			"display_text": "This can be huge, I want to see what this is!",
 			"source": "aliens",
-			"destination": "crystals",
+			"destination": "aliens_crash_site",
 			"metadata": [
 				{
 					"type": "text",
-					"data": "On my way"
+					"data": "I appreciate your enthusiasm, but my sensors are indicating strong levels of electromagnetic force."
+				},
+				{
+					"type": "text",
+					"data": "Light Level: Error."
+				},
+				{
+					"type": "text",
+					"data": "INSUFFICIENT DATA FOR MEANINGFUL ANSWER"
+				},
+				{
+					"type": "text",
+					"data": "I'm being pulled in towards the crash site."
 				},
 				{
 					"type": "img",
-					"data": "img/crystals_V01.jpg"
+					"data": "img/crash_site_V01.jpg"
 				}
 			]
 		}

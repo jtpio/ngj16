@@ -18,3 +18,7 @@ class StateMachineManager:
 
     def get_current_display_texts(self):
         return self.state_machine.get_available_display_texts()
+
+
+    def reset(self):
+        self.state_machine.reset()
