@@ -89,16 +89,24 @@
 				},
 				{
 					"type": "text",
-					"data": "Sample taken. Looks like ash."
+					"data": "Sample taken."
 				},
 				{
 					"type": "text",
-					"data": "Analyzing... Analyzing..."
+					"data": "Analyzing..."
 				},
+				{
+					"type": "text",
+					"data": "Analyzing..."
+				},			
 				{
 					"type": "delay",
 					"data": 3
 				},
+				{
+					"type": "text",
+					"data": "Looks like ash."
+				},				
 				{
 					"type": "text",
 					"data": "Confused!? Reaching cognitive disequilibrium. Please hold."
@@ -117,8 +125,8 @@
 				},
 				{
 					"type": "text",
-					"data": "Well, it looks like a really boring and dumb planet, honestly (unicode sad smiley or sticker)"
-				},
+					"data": "Well, it looks like a really boring and dumb planet, honestly תּ_תּ"
+				},			
 				{
 					"type": "text",
 					"data": "There are only two directions at each crossing. So silly."
@@ -145,7 +153,15 @@
 			"metadata": [
 				{
 					"type": "text",
-					"data": "OK, on my way. Let's see what we have. It actually looks more like a rock formation of some sort. (pause). Mountains. HC category."
+					"data": "OK, on my way. Let's see what we have. It actually looks more like a rock formation of some sort."
+				},
+                {
+					"type": "delay",
+					"data": 3
+				},
+                {
+					"type": "text",
+					"data": "Mountains. HC category."
 				},
 				{
 					"type": "img",
@@ -175,7 +191,7 @@
 		},
 		{
 			"name": "mountain_to_mountain",
-			"display_text": "Keep going.",
+			"display_text": "Keep going",
 			"source": "mountain",
 			"destination": "mountain",
 			"metadata": [
@@ -287,6 +303,10 @@
 					"type": "text",
 					"data": "I'm being pulled in towards the crash site."
 				},
+				{
+					"type": "text",
+					"data": "◑ ◔\n╔═╗\n║▓▒░░░░░░░░░░░░░░░░░░\n╚═╝\n"
+				},					
 				{
 					"type": "img",
 					"data": "img/crash_site_V01.jpg"
