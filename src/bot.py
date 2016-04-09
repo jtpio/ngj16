@@ -37,12 +37,22 @@ def help_message(bot, update):
 def error(bot, update, error):
     logger.warn('Update "%s" caused error "%s"' % (update, error))
 
+def handle_metadata(bot, chat_id, metadata):
+    for metadata_item in metadata:
+        item_type = metadata_item['type']
+        item_data = metadata_item['data']
+        if item_type == 'text':
+            bot.sendMessage(
+                chat_id,
+                text = item_data
+            )
 
 def handle_message(bot, update):
     chat_id = update.message.chat_id
     text = update.message.text
     res = stateMachineManager.send_message(text)
     print("TEXT:", text)
+    handle_metadata(bot, chat_id, res['metadata'])
     custom_keyboard = [res['triggers']]
     reply_markup = telegram.ReplyKeyboardMarkup(custom_keyboard)
     bot.sendMessage(
