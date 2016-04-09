@@ -2,7 +2,7 @@ import os
 import logging
 import telegram
 from telegram.ext import Updater
-import states
+import StateMachine
 
 TELEGRAM_BOT_TOKEN_KRKKRK = os.getenv('TELEGRAM_BOT_TOKEN_KRKKRK', '')
 BOT_NAME = '@krkkrk_bot'
@@ -30,7 +30,7 @@ def error(bot, update, error):
 def handle_message(bot, update):
     chat_id = update.message.chat_id
     text = update.message.text
-    res = states.send_message(text)
+    res = StateMachine.send_message(text)
     custom_keyboard = [res['options']]
     reply_markup = telegram.ReplyKeyboardMarkup(custom_keyboard)
     bot.sendMessage(

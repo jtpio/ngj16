@@ -9,7 +9,7 @@ def send_message(text):
     }
 
 
-class States:
+class StateMachine:
     def __init__(self, json_filename, initial_state_name):
         json_file = open(json_filename, 'r')
         states_json = json.load(json_file)
@@ -70,7 +70,7 @@ class States:
 
 if __name__ == '__main__':
     json_filename = sys.argv[1]
-    state_manager = States(json_filename, 'Valley')
+    state_manager = StateMachine(json_filename, 'Valley')
     # print(state_manager.get_current_state())
     available_triggers = state_manager.get_available_triggers()
     # print(state_manager.get_metadata(available_triggers[0]))
