@@ -57,7 +57,7 @@
 				},
 				{
 					"type": "text",
-					"data": "Wow. Interesting. Look at this!."
+					"data": "Wow. Interesting. Look at this!"
 				},
 				{
 					"type": "img",
@@ -83,6 +83,10 @@
 					"type": "img",
 					"data": "img/valley_ground_V02.png"
 				},
+                {
+                    "type": "vid",
+                    "data": "vid/valley_vid_V01.mp4"
+                },
                 {
                     "type": "delay",
                     "data": 7
@@ -185,7 +189,7 @@
 				},
 				{
 					"type": "img",
-					"data": "img/mountains_V03.png"
+					"data": "img/mountains_V04.png"
 				},
                 {
                     "type": "delay",
@@ -247,6 +251,10 @@
 					"type": "img",
 					"data": "img/crystals_V01.jpg"
 				},
+                {
+                    "type": "vid",
+                    "data": "vid/crystalGrove_vid_V02.mp4"
+                },
                 {
                     "type": "delay",
                     "data": 10 
