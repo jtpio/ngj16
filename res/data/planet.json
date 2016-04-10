@@ -294,7 +294,11 @@
 				{
 					"type": "img",
 					"data": "img/crash_site_V01.jpg"
-				}
+				},
+                {
+                    "type": "text",
+                    "data": ":alien:"
+                }
 			]
 		},
 		{
@@ -326,7 +330,11 @@
 				{
 					"type": "img",
 					"data": "img/crash_site_V01.jpg"
-				}
+				},
+                {
+                    "type": "text",
+                    "data": ":alien:"
+                }
 			]
 		}
 	]
