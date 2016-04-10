@@ -350,7 +350,7 @@
 				},
                 {
                     "type": "vid",
-                    "data": "kidnap_vid_V01.mp4"
+                    "data": "vid/kidnap_vid_V01.mp4"
                 },
                 {
 					"type": "text",
@@ -390,7 +390,7 @@
 				},
                 {
                     "type": "vid",
-                    "data": "kidnap_vid_V01.mp4"
+                    "data": "vid/kidnap_vid_V01.mp4"
                 },
 				{
 					"type": "text",
