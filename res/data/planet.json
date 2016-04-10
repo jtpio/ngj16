@@ -215,6 +215,10 @@
 			"source": "mountain",
 			"destination": "mountain",
 			"metadata": [
+                {
+                    "type": "delay",
+                    "data": 3
+                },
 				{
 					"type": "text",
 					"data": "Alright. I've looked for a way to circumnavigate this mountain but it is too steep so I can't go any further."
