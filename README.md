@@ -29,4 +29,5 @@ To run the bot or self-host it:
 2. The program expects the environment variable `TELEGRAM_BOT_TOKEN_KRKKRK` to contain the token of your own bot
 3. Use **Python 3.5+** preferably
 4. `pip install -r requirements.txt`
-5. That should be it!
+5. `python src/bots2.py`
+6. That should be it!
