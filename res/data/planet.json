@@ -73,7 +73,7 @@
 				},
 				{
 					"type": "delay",
-					"data": 6
+					"data": 2
 				},
 				{
 					"type": "text",
@@ -85,7 +85,7 @@
 				},
                 {
                     "type": "delay",
-                    "data": 3
+                    "data": 6
                 },
 				{
 					"type": "text",
