@@ -271,7 +271,7 @@
 		},
 		{
 			"name": "crystals_to_crystals",
-			"display_text": "Explore further into the wonderful maze of crystals",
+			"display_text": "Explore the crystals",
 			"source": "crystals",
 			"destination": "crystals",
 			"metadata": [
