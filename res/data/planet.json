@@ -81,7 +81,7 @@
 				},
 				{
 					"type": "img",
-					"data": "img/valley_ground_V02.png"
+					"data": "img/valley_V03.png"
 				},
                 {
                     "type": "vid",
@@ -271,7 +271,7 @@
 		},
 		{
 			"name": "crystals_to_crystals",
-			"display_text": "Explore further into the wonderful maze of crystals",
+			"display_text": "Explore the crystals",
 			"source": "crystals",
 			"destination": "crystals",
 			"metadata": [
@@ -348,6 +348,14 @@
 					"type": "text",
 					"data": "I'm being pulled in towards the crash site."
 				},
+                {
+                    "type": "vid",
+                    "data": "kidnap_vid_V01.mp4"
+                },
+                {
+					"type": "text",
+					"data": "◑ ◔\n╔═╗\n║▓▒░░░░░░░░░░░░░░░░░░\n╚═╝\n"
+				},
 				{
 					"type": "img",
 					"data": "img/crash_site_V01.jpg"
@@ -380,6 +388,10 @@
 					"type": "text",
 					"data": "I'm being pulled in towards the crash site."
 				},
+                {
+                    "type": "vid",
+                    "data": "kidnap_vid_V01.mp4"
+                },
 				{
 					"type": "text",
 					"data": "◑ ◔\n╔═╗\n║▓▒░░░░░░░░░░░░░░░░░░\n╚═╝\n"
