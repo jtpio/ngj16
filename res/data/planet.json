@@ -352,6 +352,10 @@
                     "type": "vid",
                     "data": "kidnap_vid_V01.mp4"
                 },
+                {
+					"type": "text",
+					"data": "◑ ◔\n╔═╗\n║▓▒░░░░░░░░░░░░░░░░░░\n╚═╝\n"
+				},
 				{
 					"type": "img",
 					"data": "img/crash_site_V01.jpg"
