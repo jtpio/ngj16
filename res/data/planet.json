@@ -255,6 +255,10 @@
 			"source": "crystals",
 			"destination": "crystals",
 			"metadata": [
+                {
+                    "type": "delay",
+                    "data": 3
+                },
 				{
 					"type": "text",
 					"data": "That's not wonderful. I almost punctured my neck, or my leg, I don't know. I'm still in shock!"
@@ -262,7 +266,11 @@
 				{
 					"type": "text",
 					"data": "The crystalline structure of the planet surface means I can't proceed. Full stop. Activating retreat protocols. Giving up. (white flag gif)"
-				}
+				},
+                {
+                    "type": "delay",
+                    "data": 1
+                }
 			]
 		},
 		{
