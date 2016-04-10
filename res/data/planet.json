@@ -348,6 +348,10 @@
 					"type": "text",
 					"data": "I'm being pulled in towards the crash site."
 				},
+                {
+                    "type": "vid",
+                    "data": "kidnap_vid_V01.mp4"
+                },
 				{
 					"type": "img",
 					"data": "img/crash_site_V01.jpg"
@@ -380,6 +384,10 @@
 					"type": "text",
 					"data": "I'm being pulled in towards the crash site."
 				},
+                {
+                    "type": "vid",
+                    "data": "kidnap_vid_V01.mp4"
+                },
 				{
 					"type": "text",
 					"data": "◑ ◔\n╔═╗\n║▓▒░░░░░░░░░░░░░░░░░░\n╚═╝\n"
