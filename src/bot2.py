@@ -5,6 +5,7 @@ import logging
 import sys
 import telepot
 import time
+from random_sentence import what_to_do
 from telepot.async.delegate import per_chat_id, create_open
 from StateMachineManager import StateMachineManager
 
@@ -88,7 +89,7 @@ class PlayerHandler(telepot.async.helper.ChatHandler):
                 keyboard = {'keyboard': [triggers]}
 
             yield from self.sender.sendMessage(
-                'So what should I do?',
+                what_to_do(),
                 reply_markup=keyboard
             )
 
