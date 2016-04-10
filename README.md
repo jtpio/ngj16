@@ -1,6 +1,6 @@
 # L3-AK
 
-**L3-AK** is a chat-based game currently developed for the Telegram platform.
+**L3-AK** is a chat-based game developed for the Telegram platform.
 
 The game was made at the **Nordic Game Jam 2016** in Copenhagen.
 
