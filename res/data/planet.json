@@ -302,8 +302,16 @@
 			"metadata": [
 				{
 					"type": "text",
-					"data": "I've made some progress. The ground is becoming more even compared to the crystals. (put picture of a smoke plume)"
+					"data": "I've made some progress. The ground is becoming more even compared to the crystals."
 				},
+                {
+                    "type": "img",
+                    "data": "img/habitat_V04.png"
+                },
+                {
+                    "type": "delay",
+                    "data": 3
+                },
 				{
 					"type": "text",
 					"data": "It's very quiet but I feel like I can hear strange noises in the distance. I've captured a sample for your analysis."
