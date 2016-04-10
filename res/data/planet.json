@@ -85,12 +85,16 @@
 				},
                 {
                     "type": "delay",
-                    "data": 6
+                    "data": 7
                 },
 				{
 					"type": "text",
-					"data": "Sample taken."
+					"data": "Ground sample taken."
 				},
+                {
+                    "type": "delay",
+                    "data": 2
+                },
 				{
 					"type": "text",
 					"data": "Analyzing..."
@@ -113,7 +117,7 @@
 				},
                 {
                     "type": "delay",
-                    "data": 2
+                    "data": 7 
                 },
 				{
 					"type": "text",
@@ -125,11 +129,11 @@
 				},
 				{
 					"type": "text",
-					"data": "With a laser-like focus, I can tell you it's not gonna be a piece of cake to find water here..."
+					"data": "With a laser-like focus, I can tell you it's not gonna be a piece of cake to find water here... :umbrella:"
 				},
 				{
 					"type": "delay",
-					"data": 3
+					"data": 8
 				},
 				{
 					"type": "text",
@@ -181,11 +185,11 @@
 				},
 				{
 					"type": "img",
-					"data": "img/mountains_V01.png"
+					"data": "img/mountains_V03.png"
 				},
                 {
                     "type": "delay",
-                    "data": 3
+                    "data": 7 
                 }
 			]
 		},
@@ -237,19 +241,23 @@
 				},
                 {
                     "type": "delay",
-                    "data": 4
+                    "data": 10 
                 },
-				{
-					"type": "text",
-					"data": "There seems to be a lot to discover in this area. But in the distance, I can see what I think is a smoke plume."
-				},
-				{
+                {
 					"type": "img",
 					"data": "img/crystals_V01.jpg"
 				},
                 {
                     "type": "delay",
-                    "data": 3
+                    "data": 10 
+                },
+				{
+					"type": "text",
+					"data": "There seems to be a lot to discover in this area. But in the distance, I can see what I think is a smoke plume."
+				},
+                {
+                    "type": "delay",
+                    "data": 8
                 }
 			]
 		},
@@ -294,8 +302,16 @@
 			"metadata": [
 				{
 					"type": "text",
-					"data": "I've made some progress. The ground is becoming more even compared to the crystals. (put picture of a smoke plume)"
+					"data": "I've made some progress. The ground is becoming more even compared to the crystals."
 				},
+                {
+                    "type": "img",
+                    "data": "img/habitat_V04.png"
+                },
+                {
+                    "type": "delay",
+                    "data": 3
+                },
 				{
 					"type": "text",
 					"data": "It's very quiet but I feel like I can hear strange noises in the distance. I've captured a sample for your analysis."

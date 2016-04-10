@@ -60,6 +60,11 @@ class PlayerHandler(telepot.async.helper.ChatHandler):
                     open(RES_DIR + item_data, 'rb'),
                     reply_markup=keyboard
                 )
+            if item_type == 'vid':
+                yield from self.sender.sendVideo(
+                    open(RES_DIR + item_data, 'rb'),
+                    reply_markup=keyboard
+                )
             if item_type == 'delay':
                 yield from asyncio.sleep(int(item_data))
 
