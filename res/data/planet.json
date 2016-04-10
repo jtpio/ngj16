@@ -361,6 +361,10 @@
                     "data": "vid/kidnap_vid_V01.mp4"
                 },
                 {
+                    "type": "delay",
+                    "data": 7
+                },
+                {
 					"type": "text",
 					"data": "◑ ◔\n╔═╗\n║▓▒░░░░░░░░░░░░░░░░░░\n╚═╝\n"
 				},
@@ -407,6 +411,10 @@
                 {
                     "type": "vid",
                     "data": "vid/kidnap_vid_V01.mp4"
+                },
+                {
+                    "type": "delay",
+                    "data": 7
                 },
 				{
 					"type": "text",
