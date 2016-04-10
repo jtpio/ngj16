@@ -16,6 +16,7 @@ class StateMachineManager:
         else:
             print("Invalid text message:", message)
             return {
+                'invalid': True,
                 'metadata': [],
                 'triggers': []
             }

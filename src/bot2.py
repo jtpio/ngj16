@@ -18,6 +18,8 @@ RES_DIR = os.path.join(DIRNAME, '../res/')
 STATES_JSON = os.path.join(DIRNAME, '../res/data/planet.json')
 EXTRAS_JSON = os.path.join(DIRNAME, '../res/data/extras.json')
 
+FINAL_SENT = 'CONNECTION TERMINATED...'
+
 selfie_timeline = extras_timeline.Timeline(EXTRAS_JSON)
 
 # Enable logging
@@ -34,13 +36,14 @@ class PlayerHandler(telepot.async.helper.ChatHandler):
         super(PlayerHandler, self).__init__(seed_tuple, timeout)
         self._count = 0
         self.state_machine = StateMachineManager(STATES_JSON, "landing")
+        self.sleep_time_ratio = 1
 
     def _start_bot(self):
         self.state_machine.reset()
 
     @asyncio.coroutine
-    def handle_metadata(self, chat_id, metadata):
-        keyboard = {'hide_keyboard': True}
+    def handle_metadata(self, chat_id, metadata, hide_keyboard=False):
+        keyboard = {'hide_keyboard': hide_keyboard}
         for metadata_item in metadata:
             item_type = metadata_item['type']
             item_data = metadata_item['data']
@@ -66,7 +69,7 @@ class PlayerHandler(telepot.async.helper.ChatHandler):
                     reply_markup=keyboard
                 )
             if item_type == 'delay':
-                yield from asyncio.sleep(int(item_data))
+                yield from asyncio.sleep(int(item_data) * self.sleep_time_ratio)
 
 
     @asyncio.coroutine
@@ -97,22 +100,29 @@ class PlayerHandler(telepot.async.helper.ChatHandler):
                     'Help? You need help? I am the one needing help!'
                 )
                 return
+            elif text == 'faston':
+                self.sleep_time_ratio = 0.01
+                return
+            elif text == 'fastoff':
+                self.sleep_time_ratio = 1
+                return
 
             res = self.state_machine.send_message(action)
             triggers = res['triggers']
             metadata = res['metadata']
 
-            if len(metadata) == 0:
+            if 'invalid' in res:
                 return
 
-            yield from self.handle_metadata(chat_id, res['metadata'])
+            # disable the commands
+            yield from self.handle_metadata(chat_id, res['metadata'], True)
 
             if len(triggers) > 0:
                 triggers = [[t] for t in triggers]
                 keyboard = {'keyboard': triggers}
 
             yield from self.sender.sendMessage(
-                what_to_do(),
+                what_to_do() if len(triggers) != 0 else FINAL_SENT,
                 reply_markup=keyboard
             )
         if content_type == 'photo':
