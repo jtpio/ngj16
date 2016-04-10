@@ -106,7 +106,7 @@
 				{
 					"type": "text",
 					"data": "Analyzing..."
-				},			
+				},
 				{
 					"type": "delay",
 					"data": 3
@@ -367,7 +367,7 @@
 				{
 					"type": "text",
 					"data": "◑ ◔\n╔═╗\n║▓▒░░░░░░░░░░░░░░░░░░\n╚═╝\n"
-				},					
+				},
 				{
 					"type": "img",
 					"data": "img/crash_site_V01.jpg"
@@ -378,5 +378,7 @@
                 }
 			]
 		}
-	]
+	],
+	"extras": {
+	}
 }

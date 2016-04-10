@@ -5,6 +5,8 @@ import logging
 import sys
 import telepot
 import time
+import extras_timeline
+from tempfile import TemporaryFile
 from random_sentence import what_to_do
 from telepot.async.delegate import per_chat_id, create_open
 from StateMachineManager import StateMachineManager
@@ -14,6 +16,9 @@ TELEGRAM_BOT_TOKEN_KRKKRK = os.getenv('TELEGRAM_BOT_TOKEN_KRKKRK', '')
 DIRNAME = os.path.dirname(__file__)
 RES_DIR = os.path.join(DIRNAME, '../res/')
 STATES_JSON = os.path.join(DIRNAME, '../res/data/planet.json')
+EXTRAS_JSON = os.path.join(DIRNAME, '../res/data/extras.json')
+
+selfie_timeline = extras_timeline.Timeline(EXTRAS_JSON)
 
 # Enable logging
 logging.basicConfig(
@@ -60,8 +65,20 @@ class PlayerHandler(telepot.async.helper.ChatHandler):
 
 
     @asyncio.coroutine
+    def selfie_exchange(self, chat_id, file_id):
+        '''
+        with TemporaryFile() as fp:
+            teleport.downloadFile(file_id, fp)
+            '''
+
+        actions = selfie_timeline.get_actions()
+        yield from self.handle_metadata(chat_id, actions)
+
+
+    @asyncio.coroutine
     def on_chat_message(self, msg):
         content_type, chat_type, chat_id = telepot.glance(msg)
+        # process text input: click on buttons or raw text
         if content_type == 'text':
             keyboard = {'hide_keyboard': True}
             text = msg['text']
@@ -92,6 +109,8 @@ class PlayerHandler(telepot.async.helper.ChatHandler):
                 what_to_do(),
                 reply_markup=keyboard
             )
+        if content_type == 'photo':
+            yield from self.selfie_exchange(chat_id, msg['photo'][-1]['file_id'])
 
     # TODO: handle errors
 

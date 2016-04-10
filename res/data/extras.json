@@ -1,0 +1,20 @@
+{
+	"selfie": [
+		{
+			"type": "text",
+			"data": "Did you just take a selfie and send it to me?"
+		},
+		{
+			"type": "delay",
+			"data": 3
+		},
+		{
+			"type": "text",
+			"data": "OK, I took one too, here it is!"
+		},
+		{
+			"type": "img",
+			"data": "img/curiosity_selfie.jpg"
+		}
+	]
+}
