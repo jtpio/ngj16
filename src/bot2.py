@@ -103,7 +103,8 @@ class PlayerHandler(telepot.async.helper.ChatHandler):
             yield from self.handle_metadata(chat_id, res['metadata'])
 
             if len(triggers) > 0:
-                keyboard = {'keyboard': [triggers]}
+                triggers = [[t] for t in triggers]
+                keyboard = {'keyboard': triggers}
 
             yield from self.sender.sendMessage(
                 what_to_do(),
