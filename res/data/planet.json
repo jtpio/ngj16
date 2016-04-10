@@ -231,6 +231,10 @@
 					"type": "text",
 					"data": "Let's go. My sensors indicate high levels of luminous emittance. That sounds good. Who knows, we might not find water but maybe gold instead? :blush:"
 				},
+                {
+                    "type": "delay",
+                    "data": 4
+                },
 				{
 					"type": "text",
 					"data": "There seems to be a lot to discover in this area. But in the distance, I can see what I think is a smoke plume."
@@ -238,7 +242,11 @@
 				{
 					"type": "img",
 					"data": "img/crystals_V01.jpg"
-				}
+				},
+                {
+                    "type": "delay",
+                    "data": 3
+                }
 			]
 		},
 		{
