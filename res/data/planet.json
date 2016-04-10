@@ -173,7 +173,7 @@
 				},
                 {
 					"type": "delay",
-					"data": 3
+					"data": 5
 				},
                 {
 					"type": "text",
@@ -182,7 +182,11 @@
 				{
 					"type": "img",
 					"data": "img/mountains_V01.png"
-				}
+				},
+                {
+                    "type": "delay",
+                    "data": 3
+                }
 			]
 		},
 		{
