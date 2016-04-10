@@ -42,8 +42,8 @@ class PlayerHandler(telepot.async.helper.ChatHandler):
         self.state_machine.reset()
 
     @asyncio.coroutine
-    def handle_metadata(self, chat_id, metadata):
-        keyboard = {'hide_keyboard': True}
+    def handle_metadata(self, chat_id, metadata, hide_keyboard=False):
+        keyboard = {'hide_keyboard': hide_keyboard}
         for metadata_item in metadata:
             item_type = metadata_item['type']
             item_data = metadata_item['data']
@@ -114,7 +114,8 @@ class PlayerHandler(telepot.async.helper.ChatHandler):
             if 'invalid' in res:
                 return
 
-            yield from self.handle_metadata(chat_id, res['metadata'])
+            # disable the commands
+            yield from self.handle_metadata(chat_id, res['metadata'], True)
 
             if len(triggers) > 0:
                 triggers = [[t] for t in triggers]
