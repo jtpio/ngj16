@@ -1,5 +1,6 @@
 import os
 import asyncio
+import emoji
 import logging
 import sys
 import telepot
@@ -40,7 +41,7 @@ class PlayerHandler(telepot.async.helper.ChatHandler):
             yield from self.sender.sendChatAction('typing')
             if item_type == 'text':
                 yield from self.sender.sendMessage(
-                    item_data,
+                    emoji.emojize(item_data, use_aliases=True),
                     reply_markup=keyboard
                 )
             if item_type == 'img':

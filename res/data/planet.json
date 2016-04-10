@@ -95,6 +95,10 @@
 					"type": "text",
 					"data": "Analyzing..."
 				},
+                {
+                    "type": "delay",
+                    "data": 2
+                },
 				{
 					"type": "text",
 					"data": "Analyzing..."
@@ -181,7 +185,7 @@
 				},
 				{
 					"type": "text",
-					"data": "OK I've made some progress. But my emerging curiosity unit is exhausted, I must turn back. Sorry (smiley blushing)"
+					"data": "OK I've made some progress. But my emerging curiosity unit is exhausted, I must turn back. Sorry :relaxed:"
 				},
 				{
 					"type": "text",
@@ -209,7 +213,7 @@
 			"metadata": [
 				{
 					"type": "text",
-					"data": "Let's go. My sensors indicate high levels of luminous emittance. That sounds good. Who knows, we might not find water but maybe gold instead? (happy smiley)"
+					"data": "Let's go. My sensors indicate high levels of luminous emittance. That sounds good. Who knows, we might not find water but maybe gold instead? :blush:"
 				},
 				{
 					"type": "text",

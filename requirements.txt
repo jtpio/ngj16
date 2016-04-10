@@ -1,3 +1,4 @@
 python-telegram-bot
 telepot == 6.7
 gTTS
+emoji == 0.3.9
