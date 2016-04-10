@@ -340,10 +340,18 @@
 					"type": "text",
 					"data": "I'm not sure what's happening..."
 				},
+                {
+                    "type": "delay",
+                    "data": 3
+                },
 				{
 					"type": "text",
 					"data": "There is a disturbance in the standard electromagnetic field."
 				},
+                {
+                    "type": "delay",
+                    "data": 3
+                },
 				{
 					"type": "text",
 					"data": "I'm being pulled in towards the crash site."
@@ -376,6 +384,10 @@
 					"type": "text",
 					"data": "I appreciate your enthusiasm, but my sensors are indicating strong levels of electromagnetic force."
 				},
+                {
+                    "type": "delay",
+                    "data": 3
+                },
 				{
 					"type": "text",
 					"data": "Light Level: Error."
@@ -384,6 +396,10 @@
 					"type": "text",
 					"data": "INSUFFICIENT DATA FOR MEANINGFUL ANSWER"
 				},
+                {
+                    "type": "delay",
+                    "data": 3
+                },
 				{
 					"type": "text",
 					"data": "I'm being pulled in towards the crash site."
