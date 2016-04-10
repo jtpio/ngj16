@@ -36,6 +36,7 @@ class PlayerHandler(telepot.async.helper.ChatHandler):
         super(PlayerHandler, self).__init__(seed_tuple, timeout)
         self._count = 0
         self.state_machine = StateMachineManager(STATES_JSON, "landing")
+        self.sleep_time_ratio = 1
 
     def _start_bot(self):
         self.state_machine.reset()
@@ -68,7 +69,7 @@ class PlayerHandler(telepot.async.helper.ChatHandler):
                     reply_markup=keyboard
                 )
             if item_type == 'delay':
-                yield from asyncio.sleep(int(item_data) * 0.1)
+                yield from asyncio.sleep(int(item_data) * self.sleep_time_ratio)
 
 
     @asyncio.coroutine
@@ -98,6 +99,12 @@ class PlayerHandler(telepot.async.helper.ChatHandler):
                 yield from self.sender.sendMessage(
                     'Help? You need help? I am the one needing help!'
                 )
+                return
+            elif text == 'faston':
+                self.sleep_time_ratio = 0.01
+                return
+            elif text == 'fastoff':
+                self.sleep_time_ratio = 1
                 return
 
             res = self.state_machine.send_message(action)
