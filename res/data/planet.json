@@ -49,7 +49,7 @@
 			"metadata": [
 				{
 					"type": "text",
-					"data": "There you go. Approaching surface."
+					"data": ":rocket: There you go. Approaching surface."
 				},
 				{
 					"type": "delay",
@@ -57,7 +57,7 @@
 				},
 				{
 					"type": "text",
-					"data": "Wow. Interesting. Look at that."
+					"data": "Wow. Interesting. Look at this!."
 				},
 				{
 					"type": "img",
@@ -73,11 +73,11 @@
 				},
 				{
 					"type": "delay",
-					"data": 6
+					"data": 2
 				},
 				{
 					"type": "text",
-					"data": "Touchdown!"
+					"data": "Touchdown! :tada:"
 				},
 				{
 					"type": "img",
@@ -85,7 +85,7 @@
 				},
                 {
                     "type": "delay",
-                    "data": 3
+                    "data": 6
                 },
 				{
 					"type": "text",
@@ -117,7 +117,7 @@
                 },
 				{
 					"type": "text",
-					"data": "Confused!? Reaching cognitive disequilibrium. Please hold."
+					"data": "Confused! :weary: Reaching cognitive disequilibrium. Please hold."
 				},
 				{
 					"type": "delay",
@@ -173,7 +173,7 @@
 				},
                 {
 					"type": "delay",
-					"data": 3
+					"data": 5
 				},
                 {
 					"type": "text",
@@ -182,7 +182,11 @@
 				{
 					"type": "img",
 					"data": "img/mountains_V01.png"
-				}
+				},
+                {
+                    "type": "delay",
+                    "data": 3
+                }
 			]
 		},
 		{
@@ -211,6 +215,10 @@
 			"source": "mountain",
 			"destination": "mountain",
 			"metadata": [
+                {
+                    "type": "delay",
+                    "data": 3
+                },
 				{
 					"type": "text",
 					"data": "Alright. I've looked for a way to circumnavigate this mountain but it is too steep so I can't go any further."
@@ -227,6 +235,10 @@
 					"type": "text",
 					"data": "Let's go. My sensors indicate high levels of luminous emittance. That sounds good. Who knows, we might not find water but maybe gold instead? :blush:"
 				},
+                {
+                    "type": "delay",
+                    "data": 4
+                },
 				{
 					"type": "text",
 					"data": "There seems to be a lot to discover in this area. But in the distance, I can see what I think is a smoke plume."
@@ -234,7 +246,11 @@
 				{
 					"type": "img",
 					"data": "img/crystals_V01.jpg"
-				}
+				},
+                {
+                    "type": "delay",
+                    "data": 3
+                }
 			]
 		},
 		{
@@ -243,14 +259,31 @@
 			"source": "crystals",
 			"destination": "crystals",
 			"metadata": [
+                {
+                    "type": "delay",
+                    "data": 3
+                },
 				{
 					"type": "text",
 					"data": "That's not wonderful. I almost punctured my neck, or my leg, I don't know. I'm still in shock!"
 				},
+                {
+                    "type": "delay",
+                    "data": 2
+                },
 				{
 					"type": "text",
-					"data": "The crystalline structure of the planet surface means I can't proceed. Full stop. Activating retreat protocols. Giving up. (white flag gif)"
-				}
+					"data": "The crystalline structure of the planet surface means I can't proceed."
+				},
+                {
+					"type": "text",
+					"data": "Activating retreat protocols. Giving up. :confounded:"
+				},
+
+                {
+                    "type": "delay",
+                    "data": 3
+                }
 			]
 		},
 		{
@@ -294,7 +327,11 @@
 				{
 					"type": "img",
 					"data": "img/crash_site_V01.jpg"
-				}
+				},
+                {
+                    "type": "text",
+                    "data": ":alien:"
+                }
 			]
 		},
 		{
@@ -326,7 +363,11 @@
 				{
 					"type": "img",
 					"data": "img/crash_site_V01.jpg"
-				}
+				},
+                {
+                    "type": "text",
+                    "data": ":alien:"
+                }
 			]
 		}
 	],
