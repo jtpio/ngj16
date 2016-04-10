@@ -18,6 +18,8 @@ RES_DIR = os.path.join(DIRNAME, '../res/')
 STATES_JSON = os.path.join(DIRNAME, '../res/data/planet.json')
 EXTRAS_JSON = os.path.join(DIRNAME, '../res/data/extras.json')
 
+FINAL_SENT = 'CONNECTION TERMINATED...'
+
 selfie_timeline = extras_timeline.Timeline(EXTRAS_JSON)
 
 # Enable logging
@@ -66,7 +68,7 @@ class PlayerHandler(telepot.async.helper.ChatHandler):
                     reply_markup=keyboard
                 )
             if item_type == 'delay':
-                yield from asyncio.sleep(int(item_data))
+                yield from asyncio.sleep(int(item_data) * 0.1)
 
 
     @asyncio.coroutine
@@ -102,7 +104,7 @@ class PlayerHandler(telepot.async.helper.ChatHandler):
             triggers = res['triggers']
             metadata = res['metadata']
 
-            if len(metadata) == 0:
+            if 'invalid' in res:
                 return
 
             yield from self.handle_metadata(chat_id, res['metadata'])
@@ -112,7 +114,7 @@ class PlayerHandler(telepot.async.helper.ChatHandler):
                 keyboard = {'keyboard': triggers}
 
             yield from self.sender.sendMessage(
-                what_to_do(),
+                what_to_do() if len(triggers) != 0 else FINAL_SENT,
                 reply_markup=keyboard
             )
         if content_type == 'photo':
